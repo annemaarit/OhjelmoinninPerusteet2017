@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot2c.html
+   desc: Pelaaja heitttää napista kahta noppaa,
+   jos tulos on sama, ohjelmaa onnittelee tuplan heittäjää
+   date: 6.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> Ot2c </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+
+	</style>
+</head> 
+  <body> 
+	<!--noppien aloituskuvat-->
+	<img id="heitetty1" src="kuvat/noppa1.jpg"/>
+	<img id="heitetty2" src="kuvat/noppa2.jpg"/>
+	<br/>
+	<!--painike, jonka painaminen kutsuu funktiota-->
+	<button onclick = "heitaNoppia()">Pelaa</button>
+	<br/><br/>
+	<!--onnittelun tulostusalue-->
+	<div id="tulos"></div>
+	<!--skriptitiedoston sijaintitieto -->
+	<script src="js/ot2c.js"></script>	
+  </body>
+</html>

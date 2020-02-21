@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot1d.html
+   desc: Niukkuus -peli, jossa pelaaja antaa luvun ja Pelaa -painike 
+         palauttaa häviämistiedon ja yhtänumeroa suuremman luvun.
+   date: 3.10.2017
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot1d </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+		h1 {
+			font-size: 1.2em;
+			color: blue;
+		}
+	</style>
+</head> 
+  <body> 
+	<h1>Niukkuuspeli</h1>
+	<!--syöttökenttä ja sen otsikko-->
+	<p>Anna luku: <input id="luku"/></p>
+	<!-- painikkeen painaminen kutsuu Huijaa -funktiota-->
+	<button type="button" onclick="Huijaa();">Pelaa</button>
+	<br><br>
+	<!-- divi, johon funktio tulostaa tuloksen-->
+	<div id="havisit"></div>
+	<!--skriptitiedoston sijainti-->
+	<script src="js/ot1d.js"></script>
+  </body>
+</html>

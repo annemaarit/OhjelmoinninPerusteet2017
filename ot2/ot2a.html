@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot2a.html
+   desc: Käyttäjä antaa numeroarvosanan 1-5,
+		 jolle tulostetaan vastaava sanallinen arvostelu
+   date: 6.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> Ot2a </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	#arvoSana {
+		color: blue;
+	}
+	
+	</style>
+</head> 
+  <body> 
+	<!--käyttäjän syöte-->
+	<p> Anna arvosana (1-5): </p>
+	<input id="arvoNro">
+	<!--syötteen lähetys funktiolle-->
+	<button type="button" onclick="sanallinenArvostelu()">Ok</button>
+	<br>
+	<!--vastaava sanallinen arvostelu-->
+	<p>Arvosanasi on:</p>
+	<div id="arvostelu"></div>
+	<!--skriptitiedoston sijaintitieto -->
+	<script src="js/ot2a.js"></script>	
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot3a.html
+   desc: Viiden elokuvan nimet tulostuvat 
+         sivun latautuessa skriptin kautta
+   date: 8.1.2018
+   auth: Maarit Parkkonen-->
+  <head>
+	<title> ot3a </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+		p {
+			color: #ff3355;
+			font-size:20px;
+		}
+		div {
+			padding-left: 20px;
+		}
+	</style>
+  </head> 
+  <!--sivun latautuminen kutsuu elokuvien listaus skriptiä-->
+  <body onload="elokuvalista()"> 
+		<p>Elokuvia:</p>
+		<div id="tuloste"></div>
+		<!--skriptitiedoston sijaintitieto -->	
+		<script src="js/ot3a.js"></script>	
+  </body>
+</html>

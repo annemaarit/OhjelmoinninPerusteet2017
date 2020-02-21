@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot5c.html
+    desc: laskuri laskee numeroja 10 -> 0 sekunnin välein, 
+		  laskurin voi välillä keskeyttää
+    date: 13.1.2018
+    auth: Maarit Parkkonen  -->
+<head>
+	<title> ot5c </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	button {
+		padding: 5px;
+		width:80px;
+		margin:2px;
+	}
+	#aika {
+		font-size:30px;
+		color: red;
+		width: 40px;
+		margin:auto;
+		}
+	#tausta {
+		width: 180px;
+		height:100px;
+		border: 2px solid blue;
+	}
+	
+	</style>
+</head> 
+  <body>
+   <div id="tausta">  
+	<!--laskurin käynnistys painike-->
+	<button type="button" onclick="laskeSekuntteja()">Aloita</button>
+	
+	<!--laskurin pysäytys painike-->
+	<button type="button" onclick="pysayta()">Pysäytä</button>
+	
+	<!--sekunttien esitys divi-->
+	<div id="aika"></div>
+   </div>
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot5c.js"></script>	
+  </body>
+
+</html>

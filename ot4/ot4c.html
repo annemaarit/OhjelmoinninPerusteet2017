@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot4c.html
+   desc: ohjelma testaa onko annettu nimi Aku
+   date: 10.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot4c </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button {
+		display: block;
+		margin-bottom:5px;
+		}
+	p {
+		font-size:20px;
+		font-weight: bold;
+	}
+	button {
+		padding: 15px;
+		}
+	</style>
+</head> 
+  <body> 
+    <!--nimien syöttö-->
+	<p>Tarkista nimi:</p>
+	<label for="nimi">Nimi:</label>
+	<input type="text" id="nimi"></input>
+
+	
+	<!--luvun hyväksyntä ja laskennan kutsuminen-->
+	<button type="button" onclick="tarkistaNimi()">Ok</button>
+	
+	<!--tuloksen tulostus-->
+	<div id="tuloste"></div>
+	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot4c.js"></script>	
+  </body>
+
+</html>

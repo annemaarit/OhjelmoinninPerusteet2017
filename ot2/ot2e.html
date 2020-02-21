@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot2e.html
+    desc: Tulostaa käyttäjän nimen (tekstin) 
+         niin monesti, kuin hän haluaa
+    date: 7.1.2018
+    auth: Maarit Parkkonen-->
+<head>
+	<title> ot2e </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button {
+		display: block;
+	}
+	div {
+		padding-top: 20px;
+	}
+	</style>
+</head> 
+  <body> 
+  <!--käyttäjän nimi-->
+  <label for="nimi">Nimi:</label>
+  <input type="text" id="nimi">
+  
+  <!--tulostusmäärä-->
+  <label for="kpl">Montako kertaa tulostetaan:</label>
+  <input type="text" id="kpl">
+  
+  <!--tulostuksesta vastaavan funktion kutsuminen-->
+  <button type="button" onclick="tulosta()">Tulosta</button>
+  
+  <!--tulostusalue-->
+  <div id="tuloste"></div>
+  
+  <!--skriptitiedoston sijaintitieto --> 
+  <script src="js/ot2e.js"></script>	
+  </body>
+
+</html>

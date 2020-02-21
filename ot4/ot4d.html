@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot4d.html
+   desc: Ohjelma salakirjoittaa annetun tekstin
+		 Caesar Cipper/ROT-13 salauksella
+   date: 10.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot4d </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button {
+		display: block;
+		margin-bottom:5px;
+		}
+	p {
+		font-size:20px;
+		font-weight: bold;
+	}
+	button {
+		padding: 10px;
+		}	
+	</style>
+</head> 
+  <body> 
+	<p>Salakirjoita</p>
+	<!--salattavan tekstin syöttö-->
+	<label for="teksti">Salattava teksti:</label>
+	<input type="text" id="teksti"></input>
+	
+	<!--salausavaimen syöttö-->
+	<label for="salausAvain">Salausavain:</label>
+	<input type="text" id="salausAvain"></input>	
+	
+	<!--salauksen kutsu-->
+	<button type="button" onclick="salaaTeksti()">Ok</button>
+	
+	<!--bondilauseen tulostus-->
+	<div id="tuloste"></div> 
+
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot4d.js"></script>	
+  </body>
+
+</html>

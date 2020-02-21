@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot4b.html
+   desc: ohjelma laskee ennetun luvun neliön
+   date: 10.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot4b </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button {
+		display: block;
+		margin-bottom:5px;
+		}
+	p {
+		font-size:20px;
+		font-weight: bold;
+	}
+	button {
+		padding: 15px;
+		}
+	</style>
+</head> 
+  <body> 
+    <!--nimien syöttö-->
+	<p>Laske neliö:</p>
+	<label for="luku">Luku:</label>
+	<input type="text" id="luku"></input>
+
+	
+	<!--luvun hyväksyntä ja laskennan kutsuminen-->
+	<button type="button" onclick="nelio()">laske</button>
+	
+	<!--tuloksen tulostus-->
+	<div id="tuloste"></div>
+	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot4b.js"></script>	
+  </body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot3b.html
+    desc: Valmiin kaupunkilistauksen muokkaus
+    date: 8.1.2018
+    auth: Maarit Parkkonen-->
+  <head>
+	<title> ot3b </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+		p {
+			color: #ff3355;
+			font-size:20px;
+		}
+		div {
+			padding-left: 20px;
+			margin-bottom:20px;
+		}
+		button {
+			padding:20px;
+			margin-bottom: 10px;
+			width: 200px;
+		}
+	</style>
+  </head> 
+  <!--sivun latautuminen kutsuu elokuvien listaus skriptiä-->
+  <body onload="kaupunkilista()"> 
+		<p>Kaupunkeja:</p>
+		<div id="lista1"></div> <!--alkuperäinen lista-->
+		<button type="button" onclick="poista()">Poista Vaasa</button> <!--poistaa viimeisen elementin-->
+		<div id="lista2"></div>
+		<button type="button" onclick="lisaa()">Lisää Mikkeli</button> <!--lisää Mikkelin viimeiseksi-->
+		<div id="lista3"></div>
+		<button type="button" onclick="vaihda()">Vaihda Jyväskylä -> Tampere</button> <!--muuttaa ekan elementin Tampereeksi-->
+		<div id="lista4"></div>		
+		<!--skriptitiedoston sijaintitieto -->	
+		<script src="js/ot3b.js"></script>	
+  </body>
+</html>

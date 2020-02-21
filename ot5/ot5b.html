@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot5b.html
+   desc: Hiiren kohdistimen ollessa linkkien päällä avautuu näkyviin
+		 linkkiä kuvaava kuva
+   date: 13.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot5b </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	a {
+		display: block;
+		width: 30px;
+	}
+	li {
+		margin-bottom:10px;
+	}
+	img {
+		padding: 20px; 
+	}
+	</style>
+</head> 
+  <body> 
+  <ul>
+	<!--hiiren saapuminen linkin päälle kutsuu naytaKuva -funktiota ja poistuminen PoistaKuva -funktiota-->
+	<li><a href="#" onmouseover="naytaKuva(0)" onmouseout="poistaKuva()">Pingviinejä</a></li>
+	
+	<li><a href="#" onmouseover="naytaKuva(1)" onmouseout="poistaKuva()">Koala</a></li>
+	
+	<li><a href="#" onmouseover="naytaKuva(2)" onmouseout="poistaKuva()">Tulppaaneja</a></li>
+	</ul>
+	
+	<div id="kuva"></div>	
+	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot5b.js"></script>	
+  </body>
+
+</html>

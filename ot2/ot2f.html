@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot2f.html
+    desc: Laskee kuinka monta vuotta menee annetun tavoitepääoman saavuttamiseen
+		  annetuilla alkupääomalla ja tuottoprosentilla
+    date: 7.1.2018
+    auth: Maarit Parkkonen-->
+<head>
+	<title> ot2f </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	form {
+		border: 2px solid blue;
+		padding:20px;
+		width:300px;
+	}
+	form h1 {
+		color: #113366;
+		margin-top:0px;
+	}	
+	label, input, button {
+		display: block;
+	}
+	button {
+		padding:10px;
+	}
+	input {
+		width:200px;
+		margin-bottom: 10px;
+		}
+	div {
+		padding-top: 20px;
+	}
+	</style>
+</head> 
+  <body> 
+  <form>
+	<h1>Sijoituslaskuri</h1>
+	<label for="alkupaaoma">Alkupääoma:</label>
+	<input type="text" id="alkupaaoma">
+  
+	<label for="tavoite">Tavoitepääoma:</label>
+	<input type="text" id="tavoite">
+  
+	<!--tulostusmäärä-->
+	<label for="tuottoPros">Arvioitu tuottoprosentti:</label>
+	<input type="text" id="tuottoPros">
+  
+	<!--Laskenta -funktion kutsuminen-->
+	<button type="button" onclick="laskeVuodet()">Laske</button>
+  
+	<!--tulostusalue-->
+	<div id="tuloste"></div>
+  </form>
+  	<div id="testi"></div>
+	<!--skriptitiedoston sijaintitieto --> 
+	<script src="js/ot2f.js"></script>	
+  </body>
+
+</html>

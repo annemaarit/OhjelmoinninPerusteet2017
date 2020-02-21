@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot3c.html
+   desc: Ohjelma arpoo painikkeesta lukutaulukon, jolle
+	     laskee painikkeista maksimin, minimin ja summan.
+   date: 8.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot3c </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+		p {
+			color: #ff3355;
+			font-size:20px;
+		}
+		div {
+			padding-left: 20px;
+			margin-bottom:20px;
+		}
+		button {
+			padding:20px;
+			margin-bottom: 10px;
+			width: 200px;
+		}	
+		
+		td {
+			width: 30px;
+			border: 1px solid blue;
+			text-align: center;
+		}
+	
+	</style>
+</head> 
+  <body> 
+	<p>Lukutaulukko:</p>
+	
+	<!--taulukon luonti-->
+  	<button type="button" onclick="arvoTaulukko()">Arvo taulukko</button>
+	<!--arvotun taulukon tulostus-->
+	<div id="taulukko"></div>
+	
+	<!--maksimin laskentapainike-->
+  	<button type="button" onclick="etsiMaximi()">Maximi</button>
+	<!--maximiarvon tulostus-->
+	<div id="maximi"></div>
+
+	<!--minimin laskentapainike-->	
+  	<button type="button" onclick="etsiMinimi()">Minimi</button>
+	<!--minimiarvon tulostus-->
+	<div id="minimi"></div>
+
+	<!--summan laskentapainike-->
+	<button type="button" onclick="laskeSumma()">Summa</button>
+	<!--summan tulostus-->
+	<div id="summa"></div>
+	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot3c.js"></script>	
+  </body>
+
+</html>

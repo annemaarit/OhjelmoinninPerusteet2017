@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot5a.html
+    desc: Lomake, jossa syöttökentät muuttavat väriä
+		  fokuksen mukaan
+    date: 14.1.2018
+    auth: Maarit Parkkonen-->
+<head>
+	<title> ot5a </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button {
+		display: block;
+		margin-bottom:5px;
+		}
+	input {
+		width:250px;
+	}
+	button {
+		padding: 10px;
+	}		
+	form {
+		border: 1px solid blue;
+		padding:20px;
+		width:300px;
+	}
+	.eiValittu {
+		background-color: #ffffff;
+	}
+	.onValittu {
+		background-color:#f6e4f8;
+	}
+	</style>
+</head> 
+  <body onload="nimi.focus()"> <!--firefoxissa toimii, edgessä ei??-->
+	<form>
+		<!--Tietojen syöttökentät, joihin fokuksen kohdistuessa kutsutaan valinta -funktiota ja
+		 fokuksen poistuessa kentän luokan nimi vaihtuu-->
+		<label for="nimi">Nimi:</label>
+		<input type="text" id="nimi" class="onValittu" onfocus="valinta(this)" onblur="this.className='eiValittu'">
+		
+	
+		<label for="katu">Katuosoite:</label>
+		<input type="text" id="katu" class="eiValittu"  onfocus="valinta(this)" onblur="this.className='eiValittu'">
+
+		<label for="pnumero">Postinumero:</label>
+		<input type="text" id="pnumero" class="eiValittu" onfocus="valinta(this)" onblur="this.className='eiValittu'">
+
+		<label for="ppaikka">Postitoimipaikka:</label>
+		<input type="text" id="ppaikka" class="eiValittu" onfocus="valinta(this)" onblur="this.className='eiValittu'">
+	
+		<!--painike tyhjentää lomakkeen-->
+		<button type="button" onclick="tyhjennaLomake()">Lähetä lomake</button>	
+	</form>	
+	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot5a.js"></script>	
+  </body>
+
+</html>

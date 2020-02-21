@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot1c.html
+   desc: Lomake, jossa on eri tietokonekomponenttien hinnoille syöttökentät.
+         Annettujen hintojen perusteella, summa -painike palauttaa lomakkeelle
+		 komponenttien yhteenlasketun hinnan.
+   date: 3.10.2017
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot1c </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+		input {
+			width:100px;
+			}
+		label {
+			width:100px;
+			float: left;
+			}
+		h1 {
+			font-size: 1.2em;
+			color: red;
+			}
+		button{
+			margin: 2px;
+			}
+		div {
+			padding: 1px;
+			display: inline; /*ettei euron merkki karkaa summassa eri riville*/
+			}
+	</style>
+</head> 
+  <body> 
+	<h1>Pakettilaskuri</h1>
+	<form>
+		<!--syöttökentät ja niiden otsikot-->
+		<label>emolevy:</label><input id="emo"/> &euro;	<br>	
+		<label>prosessori:</label><input id="prossa"/> &euro; <br>
+		<label>muisti:</label><input id="muisti"/> &euro; <br>
+		<label>kiintolevy: </label><input id="kiinto"/> &euro; <br>
+		<label>kotelo:</label><input id="kotelo"/> &euro; <br>
+		<label>näytönohjain:</label><input id="ohjain"/> &euro; <br>
+		<label>virtalähde:</label><input id="virta"/> &euro; <br>
+		<!--painikkeen painaminen kutsuu laskeSumma -funktioita-->
+		<label>&nbsp;</label><button type="button" onclick="laskeSumma();">Laske</button><br>
+		<!--divi, johon funktion laskema summa tulostuu ja sen otsikko-->
+		<label>summa:</label><div id="tulos"></div>&euro;<br>		
+	</form>	
+	<!--skripitiedoston sijainti-->
+	<script src="js/ot1c.js"></script>
+  </body>
+</html>

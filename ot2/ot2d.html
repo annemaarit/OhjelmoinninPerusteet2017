@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot2d.html
+   desc: Lippuautomaatti kokonaishinnan laskentaan.
+   date: 6.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot2d </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	form {
+		border: 2px solid blue;
+		padding:20px;
+		width:300px;
+	}
+	form h1 {
+		color: #113366;
+		margin-top:0px;
+	}
+	label {
+		color:#ff2255;
+		width: 150px;
+		display: block;
+		float: left;
+	}
+	.on {
+		visibility: visible;
+	}
+	.off {
+		visibility: hidden;
+	}
+	button {
+		width:170px;
+		height:40px;
+	}
+	</style>
+</head> 
+  <body> 
+  <form>
+	<h1>Lippuautomaatti</h1>
+	<input type="radio" name="luokka" id="luokka1" onclick="alennuksenNakyvyys()">
+	<label for="luokka1">1.luokka</label>	
+	<br>
+	<input type="radio" name="luokka" id="luokka2" onclick="alennuksenNakyvyys()">
+	<label for="luokka2">2.luokka</label>
+	<br>
+	<br>
+	<input type="radio" name="suunta" id="meno">	
+	<label for="meno">Meno</label>
+	<br>
+	<input type="radio" name="suunta" id="menopaluu">
+	<label for="menopaluu">Meno-paluu</label>
+	<br><br>	
+	<input type="checkbox" id="alennus" class="off">
+	<label for="alennus">Alennus</label>
+	<br/><br/> 
+	<select id="kpl">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option> <!--laskennassa tällä arvolla outo bugi, liikaa desimaaleja...-->
+		<option value="4">4</option>
+	</select>
+	<label for="kpl">Lippuja (kpl)</label>
+	<br/><br/> 
+	<button type="button" onclick="tulostaKokonaishinta()">Osta</button>
+	<br><br>
+	<div id="hinta"></div>
+  </form>
+  <!--<div id="testi"></div>-->
+  
+  <!--skriptitiedoston sijaintitieto --> 
+  <script src="js/ot2d.js"></script>	
+  </body>
+
+</html>

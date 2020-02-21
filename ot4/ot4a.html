@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot4a.html
+   desc: ohjelma muodostaa bondilauseen käyttäjän
+         antamista nimistä
+   date: 10.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot4a </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button {
+		display: block;
+		margin-bottom:5px;
+		}
+	p {
+		font-size:20px;
+		font-weight: bold;
+	}
+	button {
+		padding: 15px;
+		}
+	</style>
+</head> 
+  <body> 
+    <!--nimien syöttö-->
+	<p>Bondaa</p>
+	<label for="enimi">Etunimi:</label>
+	<input type="text" id="enimi"></input>
+	<label for="snimi">Sukunimi:</label>
+	<input type="text" id="snimi"></input>	
+	
+	<!--nimien hyväksyntä, bondilauseen tekofunktion kutsuminen-->
+	<button type="button" onclick="teeBondaus()">Bondaa</button>
+	
+	<!--bondilauseen tulostus-->
+	<div id="tuloste"></div>
+	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot4a.js"></script>	
+  </body>
+
+</html>

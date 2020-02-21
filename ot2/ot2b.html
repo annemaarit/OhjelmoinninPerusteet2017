@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot2b.html
+   desc: 
+   date: 6.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> Ot2b </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	#verotEuroina {
+		color: red;
+	}
+	p {
+		margin-bottom:0px;
+	}
+	</style>
+</head> 
+  <body> 
+	<!--käyttäjän syöte-->
+	<p>Ansiotulot vuodessa</p>
+	<input id="ansiot">
+	<br><br>
+	<!--syötteen lähetys funktiolle-->
+	<button type="button" onclick="laskeTulovero()">Laske verot</button>
+	<br>
+	<!--Tuloveron määrä euroina-->
+	<div id="verotEuroina"></div>
+	<!--skriptitiedoston sijaintitieto -->
+	<script src="js/ot2b.js"></script>	
+  </body>
+</html>

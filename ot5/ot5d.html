@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot5d.html
+    desc: ohjelmassa käyttäjä voi liikuttaa palloa alueen sisällä
+		  nuolinäppäinten avulla tai palauttaa pallon alkuun välilyöntinäppäimellä
+    date: 14.1.2018
+    auth: Maarit Parkkonen-->
+<head>
+	<title> ot5d </title> 
+	<meta charset="utf-8"/> 
+	
+	<!--muotoilut-->
+	<style type="text/css">
+	/*pallona täysin pyöristetty neliö*/
+	#pallo{
+		border-radius: 50px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		background-color:red;
+		width:50px;
+		height:50px;
+		position: absolute;
+		}
+		
+	/*pallon liikkumisalue*/
+	#alue{
+		width:500px;
+		height:500px;	
+		border: 2px solid blue;
+		position: absolute;
+	}
+	</style>
+	
+</head> 
+  <!--sivun latauduttua alustetaan muuttujat-->
+  <body onload="alustus()"> 
+   <div id="alue">
+	<div id="pallo"></div>
+   </div>
+	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot5d.js"></script>	
+  </body>
+
+</html>

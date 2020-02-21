@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot1b.html
+   desc: Käyttäjän syöttämä lause tulostuu uudelleen
+         näkyviin Tulosta -painikkeesta 
+   date: 3.10.2017
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot1b </title> 
+	<meta charset="utf-8"/> 
+	<style type="text/css">
+		h1 {font-size: 1em;}
+	</style>
+</head> 
+  <body> 
+	<h1>Kirjoita lause</h1>
+	<input id="teksti">
+	<!--painikkeen painaminen kutsuu tulostaLause -funktiota-->
+	<button type="button" onclick="tulostaLause();">Tulosta</button>
+	<br><br>
+	<!--elementit, joihin funktio tulostaa-->
+	<div id="vakiolause"></div>
+	<div id="kirjoitus"></div>
+	<!--skriptitiedoston sijaintitieto -->
+	<script src="js/ot1b.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot1e.html
+   desc: Lomake, jolle käyttäjä voi syöttää kokonaistuntien ja
+		 niihin sisältyvien yötuntien määrät.
+		 Laske -painike palauttaa lomakkeelle tunteja vastaavan palkan arvon.
+   date: 3.10.2017
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot1e </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+		h1 {
+			font-size: 1.2em;
+		}
+		label {
+			width:150px;
+			float: left;
+		}
+		input {
+			width:100px;
+		}
+		button {
+			margin: 1px;
+			}
+		div {
+			display: inline;
+			}
+	</style>
+</head> 
+  <body> 
+	<h1>Palkkalaskuri</h1>
+	<form>
+		<!--syöttökentät ja niiden otsikot työtunneille-->
+		<label>Kokonaistunnit:</label><input id="tyotunnit"/><br>
+		<label>Yötunnit:</label><input id="yo"/><br>
+		<!--laskentapainike, jota painettaessa kutsutaan laskePalkka -funktiota-->
+		<label>&nbsp;</label><button type="button" onclick="laskePalkka();">Laske</button><br>
+		<!--divi, johon funktion laskema palkkasumma tulostuu ja sen otsikko-->
+		<label>Palkka:</label><div id="palkka"></div>&euro;<br>	
+	</form>
+	<!--skriptitiedoston nimi ja sijainti-->
+	<script src="js/ot1e.js"></script>
+  </body>
+</html>

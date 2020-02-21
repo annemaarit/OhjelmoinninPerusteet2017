@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot4e.html
+    desc: Tarkistaa onko käyttäjän antamassa postinumerossa
+		  oikea määrä numeroja
+    date: 10.1.2018
+    auth: Maarit Parkkonen-->
+<head>
+	<title> ot4e </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button {
+		display: block;
+		margin-bottom:5px;
+		}
+	p {
+		font-size:20px;
+		font-weight: bold;
+	}
+	button {
+		padding: 10px;
+		}		
+	</style>
+</head> 
+  <body> 
+	<p>Tarkista postinumero:</p>
+	<!--postinumeron syöttö-->
+	<label for="postinumero">Postinumero:</label>
+	<input type="text" id="postinumero">
+
+	
+	<!--tarkistuksen kutsu-->
+	<button type="button" onclick="onkoPostinumeroOk()">Ok</button>
+	
+	<!--tarkistuksen tuloksen tulostus-->
+	<div id="tuloste"></div> 	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot4e.js"></script>	
+  </body>
+
+</html>

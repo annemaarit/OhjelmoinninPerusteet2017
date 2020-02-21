@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html> 
+<!--file: ot3e.html (Säiliölaiva -ohjelma)
+	desc: Ohjelma siirtää säiliölaivan 40 tankin välillä öljyä. 
+		  Huomioi kohde- ja lähdetankkien tilanteen sekä päivittää tehdyt siirrot näkyviin.
+		  Lähde- ja kohdetankit valitsee käyttäjä.
+	date: 9.1.2018
+	auth: Maarit Parkkonen-->
+<head>
+	<title> ot3e </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+		h1 {
+			color: #ff3355;
+			font-size:30px;
+		}
+		h2 {
+			color: blue;
+			font-size:20px;
+			}
+		div {
+			padding-left: 20px;
+			margin-bottom:20px;
+		}
+		button {
+			padding:5px;
+			margin: 10px;
+			width: 80px;
+		}			
+		td, th {
+			width: 80px;	
+			margin:5px;
+			text-align: center;			
+		}
+		td {
+			border: 1px solid blue;
+			padding: 10px;
+		}
+		
+		/*yksittäisen tankin taustaväri -luokat*/
+		.lahde {
+			background-color: red;
+		}
+		.kohde {
+			background-color: yellow;
+		}
+		.perus {
+			background-color: white;
+		}
+		
+		#tankkilaiva{
+		    padding: 20px;
+			margin-top: 20px;
+			border-radius: 30px;
+			-moz-border-radius: 30px;
+			-webkit-border-radius: 30px;
+			background-color:#888888;
+			width:800px;
+		}
+		table {
+			margin:auto;
+			}
+	
+	</style>
+</head> 
+   <!--sivun avautuessa lataa laivan tankit taulukkona näkyviin-->
+  <body onload="teeLaiva()"> 
+	<h1>Säiliölaiva:</h1>
+	
+	<!--laivataulukon divi-->
+	<div id="tankkilaiva"></div>
+	
+	<!--lähdetankin valinta laivataulukon rivinä ja sarakkeena-->
+	<div>
+		<h2>Valitse lähdetankki:</h2>
+		<label for="riviL">Rivi:</label>		
+		<select id="riviL">
+			<option value="0">1</option>
+			<option value="11">2</option>
+			<option value="22">3</option> 
+			<option value="33">4</option>
+		</select>
+
+
+		<label for="sarakLe">Sarake:</label>		
+		<select id="sarakeL">
+			<option value="0">1</option>
+			<option value="1">2</option>
+			<option value="2">3</option> 
+			<option value="3">4</option>
+			<option value="4">5</option>
+			<option value="5">6</option>
+			<option value="6">7</option> 
+			<option value="7">8</option>
+			<option value="8">9</option> 
+			<option value="9">10</option>
+		</select>
+		<!--lähdetankin valinnan hyväksyntä-->
+		<button type="button" class="lahde" onclick="lahdeTankki()">OK</button>		
+	</div>
+	
+	<!--kohdetankin valinta laivataulukon rivinä ja sarakkeena-->
+	<div>
+		<h2>Valitse kohdetankki:</h2>
+		<label for="riviK">Rivi:</label>		
+		<select id="riviK">
+			<option value="0">1</option>
+			<option value="11">2</option>
+			<option value="22">3</option> 
+			<option value="33">4</option>
+		</select>
+
+
+		<label for="sarakeK">Sarake:</label>		
+		<select id="sarakeK">
+			<option value="0">1</option>
+			<option value="1">2</option>
+			<option value="2">3</option> 
+			<option value="3">4</option>
+			<option value="4">5</option>
+			<option value="5">6</option>
+			<option value="6">7</option> 
+			<option value="7">8</option>
+			<option value="8">9</option> 
+			<option value="9">10</option>
+		</select>
+		<!--kohdetankin valinnan hyväksyntä-->
+		<button type="button" class="kohde" onclick="kohdeTankki()">OK</button>		
+	</div>
+	
+	<div>
+		<!--siirrettävän öljymäärän syöttö-->
+		<h2>Siirrettävä öljymäärä:</h2>
+		<input type="text" id="maara"></input>
+
+		<!--öljynsiirron hyväksyntä-->
+		<button type="button" onclick="siirraOljy()">Siirrä</button>
+
+		<!--<h2>Tyhjennä valinnat:</h2>-->
+		<!--valintojen nollauspainike-->
+		<!--<button type="button" onclick="nollaaValinnat()">Nollaa</button>-->
+	</div>
+	
+	<!--testidivi-->
+	<!--<div id="testi"></div>--!>
+
+
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot3e.js"></script>	
+  </body>
+
+</html>

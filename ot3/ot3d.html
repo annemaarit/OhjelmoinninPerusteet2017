@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot3d.html
+   desc: Kuvienkatseluohjelma, joka vaihtaa nuolipainikkeista
+		 edellisen tai seuraavan kuvan näkyviin.
+   date: 8.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot3d </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	#kuvakehys{
+		width: 40%;
+		height:40%;
+		display: block;
+	}
+	
+	</style>
+</head> 
+  <!--kuvataulukon luonti sivun latautuessa-->
+  <body onload="kuvataulukko()"> 
+  
+	<!--kuvien esitysalusta-->
+	<img id="kuvakehys" src="kuvat/koala.jpg">
+	
+	<!--kuvien vaihtopainikkeet-->
+	<a href="javascript:edellinen()"><img src="kuvat/prev.jpg"></a>
+	<a href="javascript:seuraava()"><img src="kuvat/next.jpg"></a>
+	
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot3d.js"></script>	
+  </body>
+
+</html>

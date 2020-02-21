@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot4g.html
+   desc: Ohjlelma laskee yhden työntekijän palkan annetuilla tiedoilla
+   date: 10.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot4g </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button {
+		display: block;
+		margin-bottom:5px;
+		}
+	p {
+		font-size:20px;
+		font-weight: bold;
+	}
+	button {
+		padding: 10px;
+		}	
+	</style>
+</head> 
+  <body> 
+	<p>Palkanlaskenta</p>
+	<!--Tuntipalkan syöttökenttä-->
+	<label for="hpalkka">Tuntipalkka:</label>
+	<input type="text" id="hpalkka"></input>
+	
+	<!--Työtuntien syöttökenttä-->
+	<label for="tyotunnit">Työtunnit:</label>
+	<input type="text" id="tyotunnit"></input>	
+	
+	<!--Painike, joka kutsuu palkanlaskenta funktiota-->
+	<button type="button" onclick="palkanLaskenta()">Laske palkka</button>
+	
+	<!-- tulostus-->
+	<div id="tuloste"></div> 
+
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot4g.js"></script>	
+  </body>
+
+</html>

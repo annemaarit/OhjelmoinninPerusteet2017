@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html> 
+<!--file:ot4h.html
+   desc: Kiinteistöohjelma, jolla voi tallentaa asuntojen tietoja ja
+         hakea kohdenumerolla halutun asunnon tiedot
+   date: 12.1.2018
+   auth: Maarit Parkkonen-->
+<head>
+	<title> ot4h </title> 
+	<meta charset="utf-8"/> 
+	<!--muotoilut-->
+	<style type="text/css">
+	label, input, button, div {
+		display: block;
+		margin-bottom:5px;
+		}
+	h1 {
+		font-size:20px;
+		font-weight: bold;
+	}
+	button {
+		padding: 10px;
+		width: 100px;
+		}	
+	fieldset {
+		font-size: 16px;
+		width: 400px;
+		padding: 15px;
+		margin-bottom: 10px;
+		border-color: #4A2885;
+		background-color: #f6e4f8;
+	}
+	legend {
+		font-size:20px;
+		color: #5c205c;
+	}
+	#kohde{
+		background-color: #ffffff;
+		border: 1px solid grey;
+	}
+	#kohdeHTML {
+		width:100px;
+	}
+	input {
+		width: 300px;
+	}
+	td, th {
+		width: 150px;	
+		margin:5px;
+		border: 1px solid blue;			
+		background-color:#ffffff;
+		text-align: left;
+	}	
+	</style>
+</head> 
+  <!--sivun latautuessa pyytää näytettäväksi uuden kohdenumeron-->
+  <body onload="seuraavaKohdenumero()"> 
+	<h1>Kiinteistöohjelma</h1>
+	
+	<!--gg-->
+	<fieldset>
+		<legend>Lisää uusi:</legend>
+		<!--näyttää automaattisesti uuden asunnon kohdenumeron,
+		numeroa ei voi muokata-->
+		<p>Kohdenumero: <span id="kohdeHTML"></span></p>
+	
+		<!--osoitteen syöttökenttä-->
+		<label for="sijainti">Osoite:</label>
+		<input type="text" id="sijaintiHTML">	
+	
+		<!--pinta-alan syöttökenttä-->
+		<label for="ala">Pinta-ala:</label>
+		<input type="text" id="alaHTML">	
+	
+		<!--hinnan syöttökenttä-->
+		<label for="maksu">Hinta:</label>
+		<input type="text" id="maksuHTML">	
+	
+		<!--kutsuu painikkeen painamisella uuden kohteen lisäys funktiota-->
+		<button type="button" onclick="lisaaUusiKohde()">Tallenna</button>
+		<!--jos lisäys ei onnistu, tulostaa tähän virheilmoituksen-->
+		<div id="virheTuloste"></div>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Hae:</legend>
+		<!--haettavan asunnon kohdenumeron syöttökenttä-->
+		<label for="kohde">Kohdenumero:</label>
+		<input type="text" id="haeKohdeNro">
+		
+		<!--kutsuu painikkeen painamisella funktiota, joka etsii annettua 
+		kohdenumeroa vastaavan asunnon tiedot-->
+		<button type="button" onclick="haeAsunnonTiedot()">Ok</button>		
+		<!--haetun asunnon tiedot tai virheilmoitus tulostuvat tähän-->
+		<div id="tuloste"></div> 			
+	</fieldset>
+	
+	<!--pyytää funktiota luomaan automaattisesti neljä asuntoa tietoineen-->	
+	<button type="button" onclick="teeNeljaAsuntoa()">Tee neljä asuntoa</button>		
+
+	<!--skriptitiedoston sijaintitieto -->	
+	<script src="js/ot4h.js"></script>	
+  </body>
+
+</html>
