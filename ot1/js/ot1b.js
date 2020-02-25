@@ -6,8 +6,5 @@
  */
  function tulostaLause(){
 	var lause = document.getElementById("teksti").value;
-	document.getElementById("vakiolause").innerHTML = 'Kirjoittamasi lause on:'+'<br>'+'kirjoitus';
-	//en keksinyt miten saisin pakotetun rivinvaihdon liitettyä edelliseen lauseeseen
-	//joten käytin kahta erillistä riviä
-	//document.getElementById("kirjoitus").innerHTML = lause;
+	document.getElementById("vakiolause").innerHTML = 'Kirjoittamasi lause on:'+'<br>'+lause;
  }
